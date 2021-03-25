@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Alex</title>
+    <style>
+        body{
+            background-image: url('https://store-images.s-microsoft.com/image/apps.19703.9007199266246365.73e47f2a-59d9-4ab9-a337-947a9821644b.42888798-183a-4256-84f6-5c10020990b3?mode=scale&q=90&h=720&w=1280');
+            background-size: cover;
+            text-align: center;
+            color: aliceblue;
+        }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body > img{
+            margin: 10px;
+        }
+       
+        .logoAlex{
+            position: absolute;
+            width: 60px;
+            top: 10px;
+            left: 10px;
+
+        }
+        
+      
+    </style>
+</head>
+<body>
+    <h1>AlexFlix</h1>
+    <h2>Catálogo sem Links</h2>
+    <a href='https://github.com/alexRicc2' target='_blank'><img src="imagens/1-80t.png" alt="imagemAlex" class='logoAlex'></a>
+
+    
+    <script>
+        listaFilmes = ["https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg", "https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BMTg2MTMyMzU0M15BMl5BanBnXkFtZTgwOTU3ODk4NTE@._V1_UX182_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_UX182_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BZDVkZmI0YzAtNzdjYi00ZjhhLWE1ODEtMWMzMWMzNDA0NmQ4XkEyXkFqcGdeQXVyNzYzODM3Mzg@._V1_UX182_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BNjk2ODQzNDYxNV5BMl5BanBnXkFtZTgwMTcyNDg4NjE@._V1_UX182_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BMTExMjU4MTUwNTVeQTJeQWpwZ15BbWU3MDk2MzkwMjc@._V1_UX182_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BYjFhOWY0OTgtNDkzMC00YWJkLTk1NGEtYWUxNjhmMmQ5ZjYyXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_UX182_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BMTQ2NjE4NDE2NV5BMl5BanBnXkFtZTgwOTcwNDE5NzE@._V1_UX182_CR0,0,182,268_AL_.jpg","https://m.media-amazon.com/images/M/MV5BNzlkNzVjMDMtOTdhZC00MGE1LTkxODctMzFmMjkwZmMxZjFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg"]
+
+        var links = ["https://www.imdb.com/title/tt0848228/?ref_=fn_al_tt_1",'https://www.imdb.com/title/tt2527338/?ref_=fn_tt_tt_20','https://www.imdb.com/title/tt2293640/?ref_=fn_al_tt_1','https://www.imdb.com/title/tt7286456/?ref_=fn_al_tt_1','https://www.imdb.com/title/tt0108778/?ref_=fn_al_tt_1','https://www.imdb.com/title/tt2119532/?ref_=nv_sr_srsg_0','https://www.imdb.com/title/tt1396484/?ref_=fn_al_tt_1','https://www.imdb.com/title/tt0100405/?ref_=fn_al_tt_1','https://www.imdb.com/title/tt1667353/?ref_=fn_al_tt_1','https://www.imdb.com/title/tt2543472/?ref_=nv_sr_srsg_6','https://www.imdb.com/title/tt2674426/?ref_=nv_sr_srsg_0','https://www.imdb.com/title/tt0232500/?ref_=nv_sr_srsg_5']
+        
+        for (var i=0; i < listaFilmes.length; i++){
+            document.write( '<img src=' + listaFilmes[i] + "class = 'semLink'>")
+        }
+        document.write("<h2>Catálogo com Links<h2>")
+        for (var i = 0; i < links.length; i++){
+            document.write("<a href=" + links[i] + ' target="_blank">  <img src=' + listaFilmes[i] + ' alt="" class=""></a>')
+        }
+        var insta = "https://raw.githubusercontent.com/gustavoguanabara/html-css/master/desafios/modulo-01/d005/imagens/icone-instagram.png"
+
+        //document.write('<footer><img src='+insta+'>Testando rodape</footer>')
+        
+    </script>
+</body>
+</html>
