@@ -1,4 +1,6 @@
   
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
@@ -53,6 +55,16 @@ a:hover {
 }
 #check{
     display: none;
+}
+
+#nome{
+	font-size: 40px;
+	font-family: 'Train One', cursive;
+}
+.prim_parte{
+	position: absolute;
+	top: 90px;
+	left: 30px;
 }
 
 @media (max-width: 984px){
