@@ -1,0 +1,81 @@
+body{
+    background-image: url('https://img.freepik.com/vetores-gratis/fundo-abstrato-colorido_23-2148807053.jpg?size=626&ext=jpg');
+    background-size: cover;
+    background-color: rgb(255, 87, 34);
+    font-family: sans-serif;
+}
+
+section {
+    max-width: 500px;
+    padding: 15px;
+    background-color: white;
+    margin-top: 100px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+div {
+    margin: 15px;
+    border: 1px solid black;
+    background-color: #bac3d6;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+header{
+    align-content: center;
+    max-height: 85px;
+    background-image: url('https://image.freepik.com/vetores-gratis/fundo-digital-de-codigo-binario-de-estilo-de-matriz-com-numeros-caindo_1017-25336.jpg');
+    background-size: cover;
+    border-radius: 5px;
+}
+section h1{
+    font-size: 25px;
+}
+
+img {
+    display: block;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+    border: 5px solid white;
+}
+
+  
+#img1, #img2, #img3, #img4{
+    padding: 1px;
+    width: 30px;
+    height: 30px;
+    vertical-align:baseline;
+    list-style:none;
+    border: 0px solid white;
+    background-color: none;
+    border-radius: 100%;
+    display: inline-block;
+    transform: translatey(0px);
+    box-shadow: 4px 6px 6px 1px rgb(0 0 0 / 56%);
+    transition: 0.7s;
+  }
+
+  a.a1:link{
+    color: transparent;
+    text-decoration:none;
+    background-color: #0000ff00;
+    border-radius: 15px;
+    box-shadow: 0px 0px 1px 0px #00000700;
+    transition: 0.7s;
+    padding: 0px 0px 0px 9px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  
+  }
+a{
+    text-decoration: none;
+    color:rgb(0, 77, 128);
+    font-weight: bold;
+}
