@@ -1,0 +1,59 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: aqua;
+    align-items: center;
+}
+header .logo{
+    width: 60px;
+    margin-left: 20px;
+}
+
+nav ul{
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li{
+    margin-right: 15px;
+    font-size: 1.3rem;
+}
+nav ul li:last-child{
+    margin-right: 0px;
+}
+
+.hero{
+    width: 100%;
+    height: 500px;
+    margin-top: 80px;
+    background-image: url("imagens/fundo.jpg");
+    background-size: cover;
+    background-clip: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero h1{
+    color: #fff;
+    text-align: center;
+    font-size: 2.9rem;
+    margin-bottom: 10px;
+}
+.hero h3{
+    color:  #fff;
+    text-align: center;
+    
+}
