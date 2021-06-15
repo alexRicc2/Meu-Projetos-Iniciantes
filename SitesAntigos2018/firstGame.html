@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Primeiro jogo: Alex</title>
+</head>
+<body>
+
+	<canvas id="stage" width="1000" height="600"></canvas>
+	<script type="text/javascript">
+	
+		window.onload = function(){
+			
+			var stage = document.getElementById('stage');
+			var ctx = stage.getContext("2d");
+
+			document.addEventListener("keydown", keyPush);
+			
+			setInterval(game, 100);
+
+			const vel = 1;
+
+			var velocidadeX = velocidadeY = 0;
+			var posicaoX = posicaoY = 10;
+
+			var tamanho =  30;
+			var quantidadePecas = 20;
+
+			var appleX = appleY = 15;
+
+			var rastro = [];
+			cauda = 5;									
+			var placar = 0;
+			var recorde = 0	;			
+
+			function game(){
+
+			
+			posicaoX += velocidadeX;
+			posicaoY += velocidadeY;
+
+			if(posicaoX < 0){
+				posicaoX = quantidadePecas - 1;}
+			if(posicaoY < 0){
+				posicaoY = quantidadePecas - 1;}
+			if(posicaoX > quantidadePecas-1){
+				posicaoX = 0;}
+			if(posicaoY > quantidadePecas-1){
+				posicaoY = 0;}
+			
+			ctx.fillStyle = "darkgreen";
+			ctx.fillRect(0,0, stage.width, stage.height);
+
+			ctx.fillStyle = "black";
+			ctx.fillRect(0,0, tamanho*quantidadePecas, tamanho*quantidadePecas);
+			
+			ctx.fillStyle = "red";
+			ctx.fillRect(appleX*tamanho,appleY*tamanho,tamanho,tamanho);
+		
+			ctx.fillStyle = "white";
+			ctx.font = "45px Changa one";
+			ctx.fillText("Placar atual: " + placar, 610, 50);
+
+			ctx.fillStyle = "yellow";
+			ctx.font = "50px Changa one";
+			ctx.fillText("Recorde: " + recorde, 610, 100);
+
+			ctx.fillStyle = "white";
+			ctx.font = "25px Changa one";
+			ctx.fillText("Criando meu primeiro jogo: de Alex",610 ,580);
+
+			ctx.fillStyle = "gray";
+				for(var i=0; i < rastro.length; i++){
+					ctx.fillRect(rastro[i].x*tamanho-1,rastro[i].y*tamanho-1,tamanho-1,tamanho-1);
+					
+					if(rastro[i].x == posicaoX && rastro[i].y == posicaoY){
+						velocidadeX = velocidadeY = 0;
+						cauda = 5;
+						placar = 0;	
+						}
+				}
+					rastro.push({x:posicaoX,y:posicaoY})
+					while (rastro.length > cauda){
+						rastro.shift();						
+					}
+					if(appleX == posicaoX && appleY == posicaoY){
+						cauda++;
+						appleX = Math.floor(Math.random()*quantidadePecas);
+						appleY = Math.floor(Math.random()*quantidadePecas);
+						placar++;
+						if(placar > recorde){
+							recorde = placar;}
+						}		
+					
+}	
+			function keyPush(event){
+						
+						switch (event.keyCode){
+							case 37: //seta para esquerda
+								velocidadeX = -vel;
+								velocidadeY = 0;
+								break;
+							case 38: //seta para cima
+								 velocidadeX = 0;
+								 velocidadeY = -vel;
+								 break;
+							case 39: //seta para direita
+								velocidadeX = vel;
+								velocidadeY = 0;
+								break;
+							case 40: //seta para baixo
+								velocidadeX = 0;
+								velocidadeY = vel;
+								break;
+							case 65: //a
+								velocidadeX = -vel;
+								velocidadeY = 0;
+								break;
+							case 87: //w
+								 velocidadeX = 0;
+								 velocidadeY = -vel;
+								 break;
+							case 68: //d
+								velocidadeX = vel;
+								velocidadeY = 0;
+								break;
+							case 83: //s
+								velocidadeX = 0;
+								velocidadeY = vel;
+								break;
+							default:
+								break;
+						}
+					}
+				}
+
+			
+	</script>
+
+	
+</body>
+</html>
